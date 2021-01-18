@@ -33,6 +33,7 @@
   color: #ffffff;
 }
 
-.content{
+.content {
   padding: 10px;
+  height: calc(100% - 84px);
 }
