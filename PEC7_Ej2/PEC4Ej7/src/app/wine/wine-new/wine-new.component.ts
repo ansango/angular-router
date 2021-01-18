@@ -6,8 +6,8 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
-import Wine from '../model/wine';
-import { WineService } from '../services/wine.service';
+import Wine from '../../model/wine';
+import { WineService } from '../../services/wine.service';
 
 @Component({
   selector: 'app-wine-new',
@@ -65,6 +65,8 @@ export class WineNewComponent implements OnInit {
       const wine: Wine = wineForm.value;
       this.wineService.createWine(wine).subscribe((res) => {
         this.wineCreated.next();
+        this.message = 'WINE CREATED';
+        console.log(this.message);
       });
     }
   }

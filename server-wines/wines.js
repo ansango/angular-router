@@ -81,6 +81,18 @@ router.get('/', (req, res) => {
   return res.status(200).json(wines);
 });
 
+router.get('/:code', (req, res) => {
+  let wineCode = req.params.code;
+  console.log ( wineCode )
+  let foundWine = wines.find(each => each.id == wineCode);
+  console.log(foundWine);
+  if (foundWine) {
+    return res.status(200).json(foundWine);
+  }
+  return res.status(400).json({msg: 'Wine with code ' + wineCode + ' not found!'});
+});
+
+
 router.post('/', (req, res) => {
   let wine = req.body;
 

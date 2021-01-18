@@ -17,6 +17,11 @@ export class WineService {
       'http://localhost:3000' + `/api/wine?q=${query}`
     );
   }
+
+  getWine(code: string): Observable<Wine> {
+    return this.http.get<Wine>('http://localhost:3000' + `/api/wine/${code}`);
+  }
+
   changeQuantity(id: number, changeInQuantity: number): Observable<any> {
     return this.http.patch('http://localhost:3000' + '/api/wine/' + id, {
       changeInQuantity: changeInQuantity,

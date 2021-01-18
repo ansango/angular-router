@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import Wine from '../model/wine';
-import WineQuantityChange from '../model/wine-quantity-change';
+import Wine from '../../model/wine';
+import WineQuantityChange from '../../model/wine-quantity-change';
 import { Observable, Subject } from 'rxjs';
-import { WineService } from '../services/wine.service';
+import { WineService } from '../../services/wine.service';
 
 import {
   debounceTime,

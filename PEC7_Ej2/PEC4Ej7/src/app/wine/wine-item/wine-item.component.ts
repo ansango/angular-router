@@ -7,8 +7,8 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 
-import Wine from '../model/wine';
-import WineQuantityChange from '../model/wine-quantity-change';
+import Wine from '../../model/wine';
+import WineQuantityChange from '../../model/wine-quantity-change';
 
 @Component({
   selector: 'app-wine-item',
