@@ -1,13 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpInterceptor, HttpResponse } from '@angular/common/http';
-import {
-  HttpHandler,
-  HttpRequest,
-  HttpErrorResponse,
-} from '@angular/common/http';
-
+import { HttpEvent, HttpInterceptor } from '@angular/common/http';
+import { HttpHandler, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
 import { UserStoreService } from './user-store.service';
 
 @Injectable()

@@ -1,15 +1,12 @@
 import Wine from '../model/wine';
-import Food from '../model/food';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WineService {
-  private wines!: Wine[];
   constructor(private http: HttpClient) {}
 
   getWines(query: string): Observable<Wine[]> {

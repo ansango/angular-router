@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { UserStoreService } from './user-store.service';
-
 @Injectable({
   providedIn: 'root',
 })
