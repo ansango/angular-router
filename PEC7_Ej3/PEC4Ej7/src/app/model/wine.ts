@@ -6,5 +6,5 @@ export default interface Wine {
   price: number;
   quantityInCart: number;
   isOnSale: boolean;
-  foodParing: Food[];
+  foodPairing: Food[];
 }

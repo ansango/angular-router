@@ -1,4 +1,15 @@
-.wine-subtitle {
+.wine-card {
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+img {
+  max-height: 200px;
   cursor: pointer;
 }
 
@@ -13,6 +24,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .is-stock-color {
   color: rgb(76, 202, 76);
 }

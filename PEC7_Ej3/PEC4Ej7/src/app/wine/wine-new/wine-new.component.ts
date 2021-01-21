@@ -6,8 +6,9 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
-import Wine from '../model/wine';
-import { WineService } from '../services/wine.service';
+import { Router } from '@angular/router';
+import Wine from '../../model/wine';
+import { WineService } from '../../services/wine.service';
 
 @Component({
   selector: 'app-wine-new',
@@ -20,7 +21,11 @@ export class WineNewComponent implements OnInit {
   public message = '';
   public wineForm!: FormGroup;
 
-  constructor(private builder: FormBuilder, private wineService: WineService) {
+  constructor(
+    private builder: FormBuilder,
+    private wineService: WineService,
+    private router: Router
+  ) {
     this.createForm();
   }
 
@@ -32,7 +37,13 @@ export class WineNewComponent implements OnInit {
         '',
         [
           Validators.required,
-          this.validateName(['Laya', 'K-Naina', 'Verdejo', 'Monastrell']),
+          this.validateName([
+            'Laya',
+            'K-Naina',
+            'Verdejo',
+            'Monastrell',
+            'Impresiones',
+          ]),
         ],
       ],
       price: [0, [Validators.required, Validators.min(1)]],
@@ -60,11 +71,14 @@ export class WineNewComponent implements OnInit {
   createWine(wineForm: FormGroup) {
     if (wineForm.invalid) {
       this.message = 'CHECK ERRORS';
-      console.log(this.message);
+      alert(this.message);
     } else {
       const wine: Wine = wineForm.value;
-      this.wineService.createWine(wine).subscribe((res) => {
+      this.wineService.createWine(wine).subscribe((resp) => {
         this.wineCreated.next();
+        this.message = 'WINE CREATED';
+        alert(this.message);
+        this.router.navigate(['wine/list']);
       });
     }
   }
