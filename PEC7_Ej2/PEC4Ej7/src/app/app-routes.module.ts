@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'wine/list', component: WineListComponent, canActivate: [AuthGuard] },
+  { path: 'wine/list', component: WineListComponent },
   {
     path: 'wine/create',
     component: WineNewComponent,

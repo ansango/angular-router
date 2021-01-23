@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['wine/list']);
         },
         (err) => {
-          alert(`Error logging in ${err}`);
+          alert(`Error logging in ${err.error.msg}`);
           this.message = err.error.msg;
         }
       );
