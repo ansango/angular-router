@@ -10,8 +10,6 @@ import { WineService } from './services/wine.service';
 import { UserService } from './services/user.service';
 import { UserStoreService } from './services/user-store.service';
 import { WineAppInterceptor } from './services/wine-app.interceptor';
-
-import { ImagePipe } from './utils/image.pipe';
 import { AppRoutesModule } from './app-routes.module';
 import { AuthGuard } from './guards/auth.guard';
 
