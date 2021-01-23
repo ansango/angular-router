@@ -138,6 +138,6 @@
 
    Las funciones middleware suelen ser utilizadas como mecanismo para verificar niveles de acceso antes de entrar en una ruta, manejo de errores, validación de datos, etc.La razón de utilizar middlewares es que los controladores no pueden hacer ni tener todo, existe lógica que debe realizarse mucho antes o después para en multiples.
 
-   En nuestro caso, en Angular utilizariamos un concepto de middleware mediante los interceptors. Un interceptor inspecciona/modifica las peticiones, osea, lo que va de nuestra aplicación al servidor y tambien lo que viene del servidor a nuestra aplicación. 
+   En nuestro caso, en Angular utilizariamos un concepto de middleware mediante los interceptors. Un interceptor inspecciona/modifica las peticiones, osea, lo que va de nuestra aplicación al servidor y tambien lo que viene del servidor a nuestra aplicación.
 
    Hay que recordar que los interceptors se ejecutan en cada petición que se realiza al servidor, siempre y cuando sean registrados. Para registrar un interceptor se tiene que proveer en el array de providers: [] en nuestro módulo raíz, por lo general AppModule. Importamos HTTP_INTERCEPTORS y HttpClientModule, luego proveémos nuestro interceptor.
